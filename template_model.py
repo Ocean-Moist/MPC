@@ -1,8 +1,9 @@
 import do_mpc
 import numpy as np
 
+
 def template_model():
-     # Define the model
+    # Define the model
 
     model_type = 'continuous'
     model = do_mpc.model.Model(model_type)
@@ -13,11 +14,11 @@ def template_model():
     # radius of rotation/wheelbase
     l = 0.69  # 27 in to m
 
-    theta = model.set_variable(var_type='_x', var_name='theta', shape=(1,1))
+    theta = model.set_variable(var_type='_x', var_name='theta', shape=(1, 1))
 
-    x_dot = model.set_variable(var_type='_x', var_name='x_dot', shape=(1,1))
-    y_dot = model.set_variable(var_type='_x', var_name='y_dot', shape=(1,1))
-    theta_dot = model.set_variable(var_type='_x', var_name='theta_dot', shape=(1,1))
+    x_dot = model.set_variable(var_type='_x', var_name='x_dot', shape=(1, 1))
+    y_dot = model.set_variable(var_type='_x', var_name='y_dot', shape=(1, 1))
+    theta_dot = model.set_variable(var_type='_x', var_name='theta_dot', shape=(1, 1))
 
     # right motor input radians/s
     v_r = model.set_variable(var_type='_u', var_name='v_r')
